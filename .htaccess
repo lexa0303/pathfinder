@@ -15,7 +15,7 @@ RewriteEngine On
 #RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Rewrite NONE www. to force www. =================================================================
-#RewriteCond %{HTTP_HOST} !^www\.
+RewriteCond %{HTTP_HOST} ^www\.
 # skip "localhost" (dev environment)...
 RewriteCond %{HTTP_HOST} !=localhost
 # skip IP calls (dev environment)
